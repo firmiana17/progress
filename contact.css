@@ -1,0 +1,407 @@
+/* ページ全体に関わるもの */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0 auto;
+}
+
+h1, h2 {
+    font-family: "游明朝体", "Yu Mincho", serif;
+}
+
+p, li, div {
+    font-family: "Yu Gothic"; 
+}
+
+input, select, button, textarea {
+    font-family: inherit;
+}
+
+a, a:hover, a:active, a:visited, a:focus {
+    color: white;
+    text-decoration: none;
+}
+
+.icon {
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+.tb, .pc {
+    display: none;
+}
+
+
+/* ヘッダー */
+.header-wrapper {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100px;
+    background-color: rgb(57, 62, 70);
+}
+
+.banner {
+    margin-top: 7.5px;
+    margin-left: 7.5px;
+    height: 40px;
+}
+
+.header-links {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.header-links a {
+    font-size: 18px;
+}
+
+.link {
+    display: none;
+}
+
+
+
+/* フッター */
+.footer-wrapper {
+    background-color:rgb(57, 62, 70);
+    color: white;
+    padding: 10px;
+}
+
+.footer-top {
+    width: 100%;
+    text-align: center;
+    margin: 20px 0 20px;
+}
+
+.footer-top p {
+    margin: 0;
+    font-size: 13px;
+}
+
+.footer-middle {
+    width: 50%;
+    margin: 50px auto 30px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.footer-bottom {
+    width: 100%;
+    display: flex;
+}
+
+.footer-bottom li {
+    list-style: none;
+    margin-top: 10px;
+}
+
+
+
+/* * * * * * * * * * * * * * * * * * * *  お問い合わせページ  * * * * * * * * * * * * * * * * * * * */
+/* 送信前に表示される部分 */
+/* タイトル・説明部分 */
+.main-wrapper {
+    margin: 0 auto;
+}
+
+.contact-wrapper {
+    padding: 100px 0 30px;
+    margin: 0 10px;
+}
+
+.contact-wrapper p {
+    margin: 30px auto;
+}
+
+.message-wrapper {
+    padding: 15px;
+}
+
+.title {
+    padding-top: 30px;
+    text-align: center;
+    color: #393E46;
+    border-bottom: 2px solid #393E46;
+    margin: 0 30px;
+}
+
+
+
+/* 入力部分 */
+.input-wrapper {
+    width: 87.5%;
+    margin: 0 auto;
+}
+
+.input-wrapper div {
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    font-size: 16px;
+    padding: 5px;
+}
+
+#lastName, #firstName {
+    width: 200px;
+    height: 30px;
+}
+
+#eMail, textarea {
+    width: 95%;
+}
+
+#eMail {
+    height: 30px;
+}
+
+textarea {
+    padding: 5px;
+    height: 200px;
+    font-size: 16px;
+    font-family: inherit;
+}
+
+.submit {
+    text-align: center;
+}
+
+input[type="submit"] {
+    border: none;
+    margin: 0;
+    font-size: 18px;
+    padding: 20px;
+    height: 60px;
+    width: 200px;
+    background-color: rgb(0, 173, 181);
+    color: white;
+}
+
+.inp {
+    line-height: 2;
+}
+
+.error {
+    visibility: hidden;
+    color: red;
+    line-height: 0;
+    margin-top: 0;
+    text-align: center;
+}
+
+
+/* 送信後に表示される部分 */
+.result-wrapper {
+    display: none;
+    margin: 0 10px;
+    padding: 200px 0 80px;
+    text-align: center;
+}
+
+.result-wrapper a {
+    color: black;
+    line-height: 60px;
+}
+
+
+
+/* * * * * * * * * * * * * * * * * * * *  レスポンシブ  * * * * * * * * * * * * * * * * * * * */
+/* タブレット(600px以上1000px未満) */
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+    /* ページ全体に関わるもの */
+    .main-wrapper {
+        background-color: #393E46;
+    }
+
+    .smph, .pc {
+        display: none;
+    }
+
+    .tb {
+        display: block;
+    }
+
+    .icon {
+        font-size: 60px;
+    }
+
+    .banner {
+        margin-top: 7.5px;
+        margin-left: 7.5px;
+        height: 10vh;
+    }
+
+
+
+    /* ヘッダー */
+    .header-wrapper {
+        height: 70px;
+        display: flex;
+    }
+
+    .header-links {
+        margin-top: 0;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        padding-left: 2vw;
+        width: 100%;
+    }
+
+
+
+    /* フッター */
+    .footer-top img {
+        margin: 0 auto;
+    }
+
+    .footer-top p {
+        font-size: 20px;
+    }
+
+    .footer-bottom {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-bottom li {
+        font-size: 18px;
+    }
+
+    .footer-bottom-right li {
+        margin-left: -30px;
+    }
+
+
+
+    /* 送信前に表示される部分 */
+    .main-wrapper2 {
+        background-color: white;
+    }
+
+    .contact-wrapper {
+        margin: 0 auto;
+        width: 600px;
+    }
+
+    /* 送信後に表示される部分 */
+    .result-wrapper {
+        margin: 0 10px;
+        padding: 39.5vh 0 37vh;
+        text-align: center;
+    }
+}
+
+
+
+/* PC(1001px以上) */
+@media (min-width: 1001px) {
+    /* ページ全体に関わるもの */
+    .main-wrapper {
+        background-color: #393E46;
+    }
+
+    .smph, .tb {
+        display: none;
+    }
+
+    .pc {
+        display: block;
+    }
+
+    .icon {
+        font-size: 30px;
+    }
+
+    .banner {
+        margin-top: 7.5px;
+        margin-left: 7.5px;
+        height: 55px;
+    }
+
+
+
+    /* ヘッダー */
+    .header-wrapper {
+        height: 70px;
+        display: flex;
+    }
+
+    .header-links {
+        margin-top: 0;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        padding-left: 2vw;
+        width: 100%;
+    }
+
+
+
+    /* フッター */
+    .footer-wrapper {
+        padding-bottom: 30px;
+    }
+
+    .footer-top img {
+        margin: 0 auto;
+        height: 60px;
+    }
+
+    .footer-top p {
+        font-size: 15px;
+    }
+
+    .footer-middle {
+        width: 25%;
+        margin: 50px auto;
+    }
+
+    .footer-bottom {
+        display: inline;
+        font-size: 18px;
+        text-align: center;
+
+    }
+
+    .contact-wrapper {
+        margin: 0 auto;
+        width: 600px;
+    }
+
+
+
+    /* 送信前に表示される部分 */
+    .main-wrapper2 {
+        background-color: white;
+    }
+
+    .contact-wrapper {
+        margin: 0 auto;
+        width: 600px;
+    }
+
+
+
+    /* 送信後に表示される部分 */
+    .result-wrapper {
+        margin: 0 10px;
+        padding: 42vh 0 33vh;
+        text-align: center;
+    }    
+}
+
+
+
+
+/*
+p, h1, h2, img, span, div {
+    border: 1px solid red;
+}

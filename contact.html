@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ja" id="main">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="contact.css" type="text/css">
+    <title>Progr:Ess | お問い合わせ</title>
+</head>
+<body>
+    <header class="header-wrapper">
+
+        <div class="banner">
+            <a href="index.html"><img src="images/banner.svg" alt="Progr:Ess"/></a>
+        </div>
+
+        <div class="header-links">
+            <a href="index.html">トップ</a>　　
+            <a href="lesson.html">レッスン一覧</a>　　
+            <a href="contact.html">お問い合わせ</a>
+        </div>
+
+    </header>
+
+    <main class="main-wrapper">
+
+        <div class="main-wrapper2">
+
+            <div id="contactWrapper" class="contact-wrapper">
+
+                <div class="message-wrapper">
+                    <h3 class="title">お問い合わせ</h3>
+                    <p>Progr:Ess運営では、平日11:00~20:00までの間にお問い合わせを拝見し、営業日3日以内にお返事を差し上げております。<br>送信前に、各項目のご入力内容に誤りがないかをよくお確かめください。</p>
+                </div>
+
+                <div class="input-wrapper">
+                    <div class="inp name-wrapper1">
+                        姓<br>
+                        <input type="text" id="lastName" class="last-name" placeholder="姓">
+                    </div>
+                    <div class="inp name-wrapper2">                
+                        名<br>
+                        <input type="text" id="firstName" class="first-name" placeholder="名">
+                    </div>                
+
+                    <div class="inp email-wrapper">
+                        メールアドレス<br>
+                        <input type="text" id="eMail" class="e-mail" placeholder="メールアドレス">
+                    </div>
+
+                    <div class="inp question-wrapper">
+                        お問い合わせ内容<br>
+                        <textarea id="textArea" class="text-area" placeholder="お問い合わせ内容をご入力ください。"></textarea>
+                    </div>
+                </div>
+
+                <p class="submit">
+                    <input type="submit" value="送信">
+                </p>
+                <p class="error">入力が適切でない項目があります。</p>
+
+            </div>
+
+            <div id="resultWrapper" class="result-wrapper">
+                お問い合わせフォームの内容を送信しました。<br>
+                <a href="index.html">トップページに戻る</a>
+            </div>
+
+        </div>
+
+    </main>
+        
+
+    <footer>
+        <div class="footer-wrapper">
+
+            <div class="footer-top">
+                <a href="index.html"><img src="images/banner.svg" alt="Progr:Ess"/></a>
+                <p class="copyright">Copyright &copy; firmiana17 2023</p>
+            </div>
+
+            <div class="footer-middle">
+                <a href="https://twitter.com/Fir_mia_na_17" target="_blank"><span class="icon fa fa-twitter"></span></a>
+                <a href=""><span class="icon fa fa-facebook"></span></a>
+                <a href=""><span class="icon fa fa-instagram"></span></a>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-left smph">
+                    <ul>
+                        <li><a href="">企業概要</a></li>
+                        <li><a href="">採用情報</a></li>
+                        <li><a href="">利用規約</a></li>
+                    </ul>
+                </div>
+                <div class="footer-bottom-right smph">
+                    <ul>
+                        <li><a href="">特定商取引法に基づく表示</a></li>
+                        <li><a href="">プライバシーポリシー</a></li>
+                    </ul>
+                </div>
+                <div class="footer-bottom-left tb">
+                    <ul>
+                        <li><a href="">企業概要</a></li>
+                        <li><a href="">採用情報</a></li>
+                        <li><a href="">利用規約</a></li>
+                    </ul>
+                </div>
+                <div class="footer-bottom-right tb">
+                    <ul>
+                        <li><a href="">特定商取引法に基づく表示</a></li>
+                        <li><a href="">プライバシーポリシー</a></li>
+                    </ul>
+                </div>
+                <div class="footer-bottom-left pc">
+                        <a href="">企業概要</a>　　　
+                        <a href="">採用情報</a>　　　
+                        <a href="">利用規約</a>　　　
+                        <a href="">特定商取引法に基づく表示</a>　　　
+                        <a href="">プライバシーポリシー</a>　　　
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <script>
+    /* contact.html */
+
+// 送信ボタンを押すと、以下の処理を行う
+// 1⃣ 入力内容が1つの配列にまとめられ、データとして扱えるようになる
+// 2⃣ 入力した内容がテキストボックス・テキストエリアから消去される
+// 3⃣ 入力画面が「送信しました。」の画面に切り替わる
+
+const submit = document.querySelector(".submit");
+submit.addEventListener("click", function() {
+    const questionArray = [];
+    // 配列を用意し、この中に取得した値を追加してまとめることで、
+    // サーバーに送信するなどの処理をしやすくする
+
+    console.log(questionArray);
+    // 配列questionArrayが空であることの確認
+
+    const lastName = document.querySelector("#lastName");
+    const firstName = document.querySelector("#firstName");
+    const eMail = document.querySelector("#eMail");
+    const textArea = document.querySelector("#textArea");
+    // それぞれのidをもつ入力欄を選択し、入力値を変数に代入する
+
+    questionArray.push(lastName.value);
+    questionArray.push(firstName.value);
+    questionArray.push(eMail.value);
+    questionArray.push(textArea.value);
+    // 取得した4つの入力値を配列questionArrayの要素として追加
+
+    const eMailPattern = /^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ui;
+    let includeArray1 = questionArray.includes('');
+    let includeArray2 = questionArray.includes('　');
+
+    if (includeArray1 || includeArray2 || !eMailPattern.test(eMail.value)) {
+        document.querySelector(".error").style.visibility = "visible";
+
+    } else {
+    console.log(questionArray);
+    // 配列questionArrayに4つの要素が追加されていることの確認
+
+    const contact = document.querySelector("#contactWrapper");
+    contact.style.display = "none";
+    // id名をcontactWrapperとするHTML要素のCSSに
+    //「display: none;」を追加することで、
+    // 入力部分を非表示にするように変更する処理
+
+    const result = document.querySelector("#resultWrapper");
+    result.style.display = "block";
+    // id名をresultWrapperとするHTML要素のCSSに
+    //「display: block;」を追加することで、
+    // 非表示の要素を表示させるように変更する処理
+
+    firstName.value = "";
+    lastName.value = "";
+    eMail.value = "";
+    textArea.value = "";
+    // 4つの入力欄をすべて空にする
+
+    window.scroll({top: 0});
+    // window.scroll()により、ページ最上部(top: 0)へ遷移する
+
+    
+    //** 入力内容を配列内に残しておかないようにするための処理 **//
+
+    questionArray.splice(0);
+    // 配列の要素をすべて削除する
+    
+    console.log(questionArray);
+    // splice(0)により、配列の要素がすべて削除されたことの確認
+    }
+});
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="lesson.css" type="text/css">
+    <title>Progr:Ess | レッスン一覧</title>
+</head>
+<body>
+    <header class="header-wrapper">
+
+        <div class="banner">
+            <a href="index.html"><img src="images/banner.svg" alt="Progr:Ess"/></a>
+        </div>
+
+        <div class="header-links">
+            <a href="index.html">トップ</a>　　
+            <a href="lesson.html">レッスン一覧</a>　　
+            <a href="contact.html">お問い合わせ</a>
+        </div>
+
+    </header>
+
+    <main class="main-wrapper">
+            
+        <h1 class="lesson-message">レッスン一覧</h1>
+
+        <div class="lesson-wrapper">
+
+            <div class="columns1">
+                <div class="lesson-column htmlCss">
+                    <div class="lesson-title htmlCss2">
+                        HTML/CSS
+                    </div>
+                    <div class="text">
+                        ウェブページの作成に使用される言語です。HTMLとCSSの組み合わせで、静的なページを作成できます。
+                    </div>
+                </div>
+
+                <div class="lesson-column js">
+                    <div class="lesson-title js2">
+                        JavaScript
+                    </div>
+                    <div class="text">
+                        DOM操作やイベントを操ることでさまざまな動作を可能にしてくれる、便利なフロントエンド言語です。
+                    </div>
+                </div>
+            </div>
+
+            <div class="columns2">
+                <div class="lesson-column php">
+                    <div class="lesson-title php2">
+                        PHP
+                    </div>
+                    <div class="text">
+                        サーバーを用いたWeb開発に適しているサーバーサイド言語です。サーバーサイド初心者にピッタリ！
+                    </div>
+                </div>
+
+                <div class="lesson-column mysql">
+                    <div class="lesson-title mysql2">
+                        MySQL
+                    </div>
+                    <div class="text">
+                        世界で最も利用されているデータベース管理システムで、Webアプリの開発には必須となるものです。
+                    </div>
+                </div>
+            </div>
+
+            <div class="columns3">
+                <div class="lesson-column java">
+                    <div class="lesson-title java2">
+                        Java
+                    </div>
+                    <div class="text">
+                        大規模な開発からモバイルアプリまで、さまざな場面で用いられる汎用的なプログラミング言語です。
+                    </div>
+                </div>
+
+                <div class="lesson-column ruby">
+                    <div class="lesson-title ruby2">
+                        Ruby
+                    </div>
+                    <div class="text">
+                        オープンソースの動的なプログラミング言語で、大小さまざまなソフトウェアを作ることができます。
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+    </main>
+
+
+    <div class="signin-wrapper">
+        <h2 class="title">　さあ、始めよう。</h2>
+        <div class="signin-btn">
+            <p>一緒に踏み出そう、はじめの一歩を。</p>
+            <a href="index.html"><img src="images/signin.png"></a>
+        </div>
+    </div>
+    
+
+    <footer>
+        <div class="footer-wrapper">
+
+            <div class="footer-top">
+                <a href="index.html"><img src="images/banner.svg" alt="Progr:Ess"/></a>
+                <p class="copyright">Copyright &copy; firmiana17 2023</p>
+            </div>
+
+            <div class="footer-middle">
+                <a href="https://twitter.com/Fir_mia_na_17" target="_blank"><span class="icon fa fa-twitter"></span></a>
+                <a href=""><span class="icon fa fa-facebook"></span></a>
+                <a href=""><span class="icon fa fa-instagram"></span></a>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-left smph">
+                    <ul>
+                        <li><a href="">企業概要</a></li>
+                        <li><a href="">採用情報</a></li>
+                        <li><a href="">利用規約</a></li>
+                    </ul>
+                </div>
+                <div class="footer-bottom-right smph">
+                    <ul>
+                        <li><a href="">特定商取引法に基づく表示</a></li>
+                        <li><a href="">プライバシーポリシー</a></li>
+                    </ul>
+                </div>
+                <div class="footer-bottom-left tb">
+                    <ul>
+                        <li><a href="">企業概要</a></li>
+                        <li><a href="">採用情報</a></li>
+                        <li><a href="">利用規約</a></li>
+                    </ul>
+                </div>
+                <div class="footer-bottom-right tb">
+                    <ul>
+                        <li><a href="">特定商取引法に基づく表示</a></li>
+                        <li><a href="">プライバシーポリシー</a></li>
+                    </ul>
+                </div>
+                <div class="footer-bottom-left pc">
+                        <a href="">企業概要</a>　　　
+                        <a href="">採用情報</a>　　　
+                        <a href="">利用規約</a>　　　
+                        <a href="">特定商取引法に基づく表示</a>　　　
+                        <a href="">プライバシーポリシー</a>　　　
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <script>
+        /* lesson.html */
+        let windowSize = window.innerWidth;
+        // 更新時のウィンドウ幅を取得し、変数windowSize に代入する
+        
+        window.onresize = function() {
+            windowSize = window.innerWidth;
+        }
+        // ウィンドウ幅のリアルタイムな値を取得し、変数windowSizeに再代入する
+        
+        let flg1 = false;
+        let flg2 = false;
+        let flg3 = false;
+        let flg4 = false;
+        let flg5 = false;
+        let flg6 = false;
+        // ウィンドウ幅が1000px以下のとき、HTML/CSS、JavaScript、PHP、MySQL、Java、Rubyの
+        // 説明ボックスの表示に関するフラグを表す変数。
+        // ※ウィンドウ幅が1001px以上のときにも、値をtrueにして用いる。
+        
+        let flg7 = false;
+        let flg8 = false;
+        let flg9 = false;
+        // ウィンドウ幅が1001px以上のとき、columns1クラス(HTML/CSS と JavaScript のペア)、columns2クラス(PHP と MySQL のペア)、
+        // columns3クラス(Java と Ruby のペア) の 各説明ボックスの表示に関するフラグを表す変数。
+        // ※ウィンドウ幅が1000px以下のときにも、値をtrueにして用いる。
+        
+        window.addEventListener("scroll", function() {
+            let coordY = window.scrollY;
+            // window.scrollYにより、ページをスクロールした値を取得し、変数coordY に代入する
+        
+            const hc = document.querySelector(".htmlCss");
+            const js = document.querySelector(".js");
+            const php = document.querySelector(".php");
+            const sql = document.querySelector(".mysql");
+            const ja = document.querySelector(".java");
+            const rb = document.querySelector(".ruby");
+            // それぞれのクラスをもつHTML要素を取得し、それぞれの変数に代入する
+            // ※1000px以下のときメインで使用
+        
+            const columns1 = document.querySelector(".columns1");
+            const columns2 = document.querySelector(".columns2");
+            const columns3 = document.querySelector(".columns3");
+            // それぞれのクラスをもつHTML要素を取得し、それぞれの変数に代入する
+            // ※1001px以上のときメインで使用
+        
+            if(windowSize <= 1000) {
+            // ウィンドウ幅が1000px以下のとき
+        
+                if(coordY >= 250 && flg1 === false) {
+                // スクロール値が250px以上、変数flg1 がfalse の2つの条件を満たすとき、
+                    flg1 = true;
+                    // 1⃣ 変数flg1 の値をtrueにする
+                    //    ※trueをfalseに戻す方法はないので、一度だけ処理が行われるようになる
+                    hc.animate(
+                        [ {opacity: 0}, {opacity: 1} ],
+                        { duration: 1000, fill: "forwards"}
+                    );
+                    // 2⃣ htmlcssクラスをもつHTML要素をフェードインで表示する
+                    //    ※opacity: 0 → 1 ・・・ 非表示 → 表示
+                    //    ※duration: 1000 ・・・ 変化にかかる時間
+                    //    ※fill: "forwards" ・・・アニメーション再生後の画像の状態(forwards は opacity: 1 (表示) の状態)            
+                    columns1.style.opacity = 1;
+                    flg7 = true;
+                    // 3⃣ column1クラスをもつHTML要素を表示し、変数flg7 をtrueにする
+                    //　　※3⃣の処理がないと、ウィンドウ幅が1001px以上に変更したときに非表示に戻ってしまったり、
+                    //      表示できてもフェードイン処理が再び行われてしまうので、それらを防ぐために加えた処理
+                }
+        
+                if(coordY >= 500 && flg2 === false) {
+                    flg2 = true;
+                    js.animate(
+                        [ {opacity: 0}, {opacity: 1} ],
+                        { duration: 1000, fill: "forwards"}
+                    );
+                    columns1.style.opacity = 1;
+                    flg7 = true;
+                }
+        
+                if(coordY >= 750 && flg3 === false) {
+                    flg3 = true;
+                    php.animate(
+                        [ {opacity: 0}, {opacity: 1} ],
+                        { duration: 1000, fill: "forwards"}
+                    );
+                    columns2.style.opacity = 1;
+                    flg8 = true;
+                }
+        
+                if(coordY >= 1000 && flg4 === false) {
+                    flg4 = true;
+                    sql.animate(
+                        [ {opacity: 0}, {opacity: 1} ],
+                        { duration: 1000, fill: "forwards"}
+                    );
+                    columns2.style.opacity = 1;
+                    flg8 = true;
+                }
+        
+                if(coordY >= 1250 && flg5 === false) {
+                    flg5 = true;
+                    ja.animate(
+                        [ {opacity: 0}, {opacity: 1} ],
+                        { duration: 1000, fill: "forwards"}
+                    );
+                    columns3.style.opacity = 1;
+                    flg9 = true;
+                }
+        
+                if(coordY >= 1500 && flg6 === false) {
+                    flg6 = true;
+                    rb.animate(
+                        [ {opacity: 0}, {opacity: 1} ],
+                        { duration: 1000, fill: "forwards"}
+                    );
+                    columns3.style.opacity = 1;
+                    flg9 = true;
+                }
+            } else {
+            // ウィンドウ幅が1001px以上のとき
+        
+                if(coordY >= 250 && flg7 === false) {
+                    flg7 = true;
+                    columns1.animate(
+                        [ {opacity: 0}, {opacity: 1} ],
+                        { duration: 1000, fill: "forwards"}
+                    );
+                    hc.style.opacity = 1;
+                    flg1 = true;
+                    js.style.opacity = 1;
+                    flg2 = true;
+                    // columns1、2、3 は言語の説明ボックスが2つずつのペアになっているので、
+                    // それらの opacity や フラグを true にする処理をまとめて行うことで、
+                    // ウィンドウ幅が変化することで画面が非表示に戻ってしまったり、
+                    // フェードイン処理が再び行われたりするのを防いでいる
+                }
+        
+                if(coordY >= 500 && flg8 === false) {
+                    flg8 = true;
+                    columns2.animate(
+                        [ {opacity: 0}, {opacity: 1} ],
+                        { duration: 1000, fill: "forwards"}
+                    );
+                    php.style.opacity = 1;
+                    flg3 = true;
+                    sql.style.opacity = 1;
+                    flg4 = true;
+                }
+        
+                if(coordY >= 750 && flg9 === false) {
+                    flg9 = true;
+                    columns3.animate(
+                        [ {opacity: 0}, {opacity: 1} ],
+                        { duration: 1000, fill: "forwards"}
+                    );
+                    ja.style.opacity = 1;
+                    flg5 = true;
+                    rb.style.opacity = 1;
+                    flg6 = true;
+                }
+            }
+        });
+        </script>
+
+</body>
+</html>

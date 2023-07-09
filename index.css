@@ -1,0 +1,451 @@
+/* ページ全体に関わるもの */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0 auto;
+}
+
+h1, h2 {
+    font-family: "游明朝体", "Yu Mincho", serif;
+}
+
+p, li, div {
+    font-family: "Yu Gothic"; 
+}
+
+a, a:hover, a:active, a:visited, a:focus {
+    color: white;
+    text-decoration: none;
+}
+
+.icon {
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+.tb, .pc {
+    display: none;
+}
+
+
+/* ヘッダー */
+.header-wrapper {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100px;
+    background-color: rgb(57, 62, 70);
+}
+
+.banner {
+    margin-top: 7.5px;
+    margin-left: 7.5px;
+    height: 55px;
+}
+
+.header-links {
+    text-align: center;
+    
+}
+
+.header-links a {
+    font-size: 18px;
+}
+
+.link {
+    display: none;
+}
+
+
+
+/* さあ、始めよう。 */
+.signin-btn {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.signin-btn p {
+    font-family: "Yu Mincho";
+    margin-top: 100px;
+}
+
+.signin-btn img {
+    width: 234px;
+}
+
+
+
+/* フッター */
+.footer-wrapper {
+    background-color:rgb(57, 62, 70);
+    color: white;
+    padding: 10px;
+}
+
+.footer-top {
+    width: 100%;
+    text-align: center;
+    margin: 20px 0 20px;
+}
+
+.footer-top p {
+    margin: 0;
+    font-size: 13px;
+}
+
+.footer-middle {
+    width: 50%;
+    margin: 50px auto 30px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.footer-bottom {
+    width: 100%;
+    display: flex;
+}
+
+.footer-bottom li {
+    list-style: none;
+    margin-top: 10px;
+}
+
+
+
+/* * * * * * * * * * * * * * * * * * * *  トップページ  * * * * * * * * * * * * * * * * * * * */
+/* メインビジュアル */
+.indexMessage {
+    background-image: url(images/index-theme1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 45vh 0;
+    color: white;
+    text-align: center;
+}
+
+
+/* Progr:Essとは */
+.about-wrapper {
+    padding: 160px 0 150px;
+}
+
+.title {
+    padding-top: 30px;
+    text-align: center;
+    color: #393E46;
+    border-bottom: 2px solid #393E46;
+    margin: 0 30px;
+}
+
+.text {
+    width: 90%;
+    height: 384px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto 150px;
+}
+
+.text1 {
+    background-image: url(images/text1.jpg);
+    border-radius: 6px;
+}
+
+.text2 {
+    background-image: url(images/text2.jpg);
+    border-radius: 6px;
+}
+
+.text3 {
+    background-image: url(images/text3.jpg);
+    border-radius: 6px;
+}
+
+
+.box {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 27.5%;
+    color: white;
+    background-color: rgba(0, 173, 181, 0.8);
+    width: 85%;
+    height: 175px;
+    text-align: center;
+}
+
+.box h2 {
+    font-size: 19px;
+    padding-top: 15px;
+    margin: 0 auto;
+    text-align: center;
+    border-bottom: 2px solid white;
+    width: 90%;
+}
+
+.box p {
+    margin-top: 15px;
+}
+
+
+
+/* * * * * * * * * * * * * * * * * * * *  レスポンシブ  * * * * * * * * * * * * * * * * * * * */
+/* タブレット(600px以上1000px未満) */
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+    /* ページ全体に関わるもの */
+    .smph, .pc {
+        display: none;
+    }
+
+    .tb {
+        display: block;
+    }
+
+    .icon {
+        font-size: 60px;
+    }
+
+    .banner {
+        margin-top: 7.5px;
+        margin-left: 7.5px;
+        height: 55px;
+    }
+    
+
+    /* ヘッダー */
+    .header-wrapper {
+        height: 70px;
+        display: flex;
+    }
+
+    .header-links {
+        text-align: left;
+        display: flex;
+        align-items: center;
+        padding-left: 2vw;
+        width: 100%;
+    }
+
+
+
+    /* Progr:Essとは */
+    .about-wrapper {
+        padding: 260px 0 225px;
+    }
+
+    .title, .box h2 {
+        font-size: 27px;
+    }
+
+    .about-wrapper p, .box p {
+        font-size: 20px;
+    }
+
+    .text {
+        height: 576px;
+        margin: 0 auto 225px;
+    }
+
+    .box {
+        height: 220px;
+        width: 460px;
+        top: 30%;
+    }
+
+
+
+    /* さあ、始めよう。 */
+    .title {
+        font-size: 27px;
+    }
+
+    .signin-btn p {
+        font-size: 20px;
+    }
+
+    .signin-btn img {
+        width: 320px;
+    }
+
+
+
+    /* フッター */
+    .footer-top img {
+        margin: 0 auto;
+    }
+
+    .footer-top p {
+        font-size: 20px;
+    }
+
+    .footer-bottom {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-bottom li {
+        font-size: 18px;
+    }
+
+    .footer-bottom-right li {
+        margin-left: -30px;
+    }
+}
+
+
+
+
+/* PC(1001px以上) */
+@media (min-width: 1001px) {
+    /* ページ全体に関わるもの */
+    .smph, .tb {
+        display: none;
+    }
+
+    .pc {
+        display: inline-block;
+    }
+
+    .icon {
+        font-size: 30px;
+    }
+
+    .banner {
+        margin-top: 7.5px;
+        margin-left: 7.5px;
+        height: 55px;
+    }
+
+
+    /* ヘッダー */
+    .header-wrapper {
+        height: 70px;
+        display: flex;
+    }
+
+    .header-links {
+        text-align: left;
+        display: flex;
+        align-items: center;
+        padding-left: 2vw;
+        width: 100%;
+    }
+
+
+
+    /* メインビジュアル */ 
+    .index-message {
+        width: 100%;
+    }
+
+
+
+    /* Progr:Essとは */
+    .about-wrapper {
+        padding: 245px 0 265px;
+    }
+
+    .title, .box h2 {
+        font-size: 27px;
+    }
+
+    .about-wrapper p, .box p {
+        font-size: 20px;
+    }
+
+    .text {
+        width: 100%;
+        height: 768px;
+        margin: 0 auto 225px;
+    }
+
+    .box {
+        width: 450px;
+        height: 220px;
+        top: 37.5%;
+        margin: 0;
+    }
+
+    .box1, .box3 {
+        left: 12.5%;
+    }
+
+    .box2 {
+        position: absolute;
+        left: initial;
+        right: 12.5%;
+    }
+
+
+
+
+    /* さあ、始めよう。 */
+    .title {
+        font-size: 27px;
+    }
+
+    .signin-btn p {
+        font-size: 20px;
+    }
+
+    .signin-btn img {
+        width: 240px;
+    }
+
+
+
+    /* フッター */
+    .footer-wrapper {
+        padding-bottom: 30px;
+    }
+
+    .footer-top img {
+        margin: 0 auto;
+        height: 60px;
+    }
+
+    .footer-top p {
+        font-size: 15px;
+    }
+
+    .footer-middle {
+        width: 25%;
+        margin: 50px auto;
+    }
+
+    .footer-bottom {
+        display: inline;
+        font-size: 18px;
+        text-align: center;
+
+    }
+}
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * JavaScript * * * * * * * * * * * * * * * * * * * * */
+/* JavaScript フェードイン・アウト用 */
+.index-message {
+    animation-name: smooth-fadein-out;
+    animation-duration: 5s;
+    animation-timing-function: cubic-bezier(0.9, 0.92, 0.95, 0.99, 0.99, 0.99, 0.95, 0.92, 0.9);
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes smooth-fadein-out {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/*
+p, h1, h2, img, span, div {
+    border: 1px solid red;
+}
