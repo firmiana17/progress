@@ -419,11 +419,9 @@ a, a:hover, a:active, a:visited, a:focus {
         margin: 50px auto;
     }
 
-    .footer-bottom {
-        display: inline;
+    .footer-bottom-left {
         font-size: 18px;
-        text-align: center;
-
+        margin: 0 auto;
     }
 }
 
