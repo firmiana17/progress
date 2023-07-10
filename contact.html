@@ -48,6 +48,11 @@
                         <input type="text" id="eMail" class="e-mail" placeholder="メールアドレス">
                     </div>
 
+                    <div class="inp email-check-wrapper">
+                        メールアドレス(確認用)<br>
+                        <input type="text" id="eCheck" class="e-check" placeholder="メールアドレス(確認用)">
+                    </div>
+
                     <div class="inp question-wrapper">
                         お問い合わせ内容<br>
                         <textarea id="textArea" class="text-area" placeholder="お問い合わせ内容をご入力ください。"></textarea>
@@ -144,23 +149,25 @@ submit.addEventListener("click", function() {
     const lastName = document.querySelector("#lastName");
     const firstName = document.querySelector("#firstName");
     const eMail = document.querySelector("#eMail");
+    const eCheck = document.querySelector("#eCheck");
     const textArea = document.querySelector("#textArea");
     // それぞれのidをもつ入力欄を選択し、入力値を変数に代入する
 
+    const eMailPattern = /^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ui;
+    let includeArray1 = questionArray.includes('');
+    let includeArray2 = questionArray.includes(' ');
+    let includeArray3 = questionArray.includes('　');
+
+    if (includeArray1 || includeArray2 || includeArray3 || !eMailPattern.test(eMail.value) || eMail.value !== eCheck.value ) {
+        document.querySelector(".error").style.visibility = "visible";
+
+    } else {
     questionArray.push(lastName.value);
     questionArray.push(firstName.value);
     questionArray.push(eMail.value);
     questionArray.push(textArea.value);
     // 取得した4つの入力値を配列questionArrayの要素として追加
 
-    const eMailPattern = /^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ui;
-    let includeArray1 = questionArray.includes('');
-    let includeArray2 = questionArray.includes('　');
-
-    if (includeArray1 || includeArray2 || !eMailPattern.test(eMail.value)) {
-        document.querySelector(".error").style.visibility = "visible";
-
-    } else {
     console.log(questionArray);
     // 配列questionArrayに4つの要素が追加されていることの確認
 

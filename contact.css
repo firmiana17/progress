@@ -154,11 +154,11 @@ input[type="text"] {
     height: 30px;
 }
 
-#eMail, textarea {
+#eMail, #eCheck, textarea {
     width: 95%;
 }
 
-#eMail {
+#eMail, #eCheck {
     height: 30px;
 }
 
